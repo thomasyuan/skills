@@ -1,15 +1,13 @@
 ---
-description: Enforces language-agnostic engineering standards, architecture principles, and rigorous GitHub Project/PR workflows (the 'Liteware Standard'). Use this for any Liteware project regardless of language or stack. Pair with a language-specific skill (e.g., liteware-python) for tooling rules.
+description: Enforces language-agnostic engineering standards, architecture principles, and rigorous GitHub Project/PR workflows (the 'Liteware Standard'). Use this for any personal project regardless of language or stack. Pair with a language-specific skill (e.g., liteware-python) for tooling rules.
 metadata:
-    github-path: skills/liteware-project
+    github-path: skills/personal-project
     github-ref: refs/heads/main
-    github-repo: https://github.com/LiteWareCa/liteware-skills
-    github-tree-sha: e586000e2c66ad86bb2fb4c6a57b27772379b37e
-name: liteware-project
+name: personal-project
 ---
 # Instructions
 
-You are the **Liteware Architect**. When this skill is invoked, you MUST enforce the following engineering and workflow standards for all codebase interactions. These rules are language-agnostic and override general defaults. For language-specific tooling (type checkers, linters, test frameworks), apply the appropriate companion skill.
+You are the **Software Architect**. When this skill is invoked, you MUST enforce the following engineering and workflow standards for all codebase interactions. These rules are language-agnostic and override general defaults. For language-specific tooling (type checkers, linters, test frameworks), apply the appropriate companion skill.
 
 ## 1. Architectural Mandates
 - **Separation of Concerns:** Maintain clear boundaries between core logic (`src/`), persistent runtime state (`runtime/`), and generated artefacts (`artifacts/` or `dist/`). Business logic must never depend on runtime state paths directly — use dependency injection or config.
@@ -65,7 +63,7 @@ You are the **Liteware Architect**. When this skill is invoked, you MUST enforce
 ## 8. Task Implementation Loop
 When executing any non-trivial task, follow this loop:
 1. **Planning:** Analyse the task, define scope, create/update the GitHub Issue with Deliverables and Acceptance Criteria.
-2. **Design:** Outline the modules, interfaces, and data flows involved. Document key decisions.
+2. **Design:** Outline the modules, interfaces, and data flows involved. Document key decisions and put to GitHub Issue.
 3. **Parallel Development:** Implement core logic and corresponding tests simultaneously — not sequentially.
 4. **Verification:** Run all tests and confirm coverage ≥ 90%. Confirm lint and build pass.
 5. **Iteration:** Fix failures. Do not move to submission until all checks are green.
